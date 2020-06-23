@@ -12,6 +12,7 @@ import CounterReducer from "./component/CounterReducer";
 import ComponentA from "./component/ComponentA";
 import ComponentB from "./component/ComponentB";
 import axios from 'axios'
+import WrapComponent from "./component/WrapComponent";
 
 export const UserContext = createContext()
 export const LanguageContext = createContext()
@@ -58,17 +59,17 @@ function App() {
     //const [user, setUser] = useState({name: 'yamada', age:'32'})
     //const [language, setLanguage] = useState('日本語')
     //const [count, dispatch] = useReducer(reducer, initialState)
-    const [state, dispatch] = useReducer(reducer, initialState)
-    useEffect(() => {
-        axios
-            .get('https://jsonplaceholder.typicode.com/posts/1')
-            .then(res => {
-                dispatch({type: 'FETCH_SUCCESS', payload: res.data})
-            })
-            .catch(err => {
-                dispatch({type: 'FETCH_ERROR'})
-            })
-    })
+    //const [state, dispatch] = useReducer(reducer, initialState)
+    //useEffect(() => {
+    //    axios
+    //        .get('https://jsonplaceholder.typicode.com/posts/1')
+    //        .then(res => {
+    //            dispatch({type: 'FETCH_SUCCESS', payload: res.data})
+    //        })
+    //        .catch(err => {
+    //            dispatch({type: 'FETCH_ERROR'})
+    //        })
+    //})
   return (
     <div className="App">
         {/*<CounterHooks />
@@ -90,9 +91,10 @@ function App() {
             <ComponentB />
             <ComponentC />
         </CountContext.Provider>
-        */}
         <h1>{state.loading ? 'Loading....' : state.post.title }</h1>
         <h1>{state.error ? state.error : null }</h1>
+        */}
+        <WrapComponent />
     </div>
   );
 }
