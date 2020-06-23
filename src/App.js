@@ -1,17 +1,17 @@
 import React, {createContext, useEffect, useReducer, useState} from 'react';
 import './App.css';
-import CounterHooks from "./component/CounterHooks";
-import FormHook from "./component/FormHook";
-import ItemHook from "./component/ItemHook";
-import EffectHook from "./component/EffectHook";
-import MouseEventEffect from "./component/MouseEventEffect";
-import DataFetch from "./component/DataFetch";
-import DataFetchById from "./component/DataFetchById";
-import ComponentC from "./component/ComponentC";
-import CounterReducer from "./component/CounterReducer";
-import ComponentA from "./component/ComponentA";
-import ComponentB from "./component/ComponentB";
-import WrapComponent from "./component/WrapComponent";
+import CounterHooks from "./component/useState/CounterHooks";
+import FormHook from "./component/useState/FormHook";
+import ItemHook from "./component/useState/ItemHook";
+import EffectHook from "./component/useEffect/EffectHook";
+import MouseEventEffect from "./component/useEffect/MouseEventEffect";
+import DataFetch from "./component/useEffect/DataFetch";
+import DataFetchById from "./component/useEffect/DataFetchById";
+import ComponentC from "./component/useContext/ComponentC";
+import CounterReducer from "./component/useReducer/CounterReducer";
+import ComponentA from "./component/useContext/ComponentA";
+import ComponentB from "./component/useContext/ComponentB";
+import WrapComponent from "./component/useCallback/WrapComponent";
 import Check from "./component/useMemo/Check";
 import axios from 'axios'
 import FocusInput from "./component/useRef/FocusInput";
@@ -78,33 +78,34 @@ function App() {
     //})
   return (
     <div className="App">
-        {/*<CounterHooks />
+        {/*
+            <CounterHooks />
             <FormHook/>
             <ItemHook/>
             <EffectHook />
             <MouseEventEffect/>
             <DataFetch />
             <DataFetchById />
-        <UserContext.Provider value={user}>
-            <LanguageContext.Provider value={language}>
-                <ComponentD />
-            </LanguageContext.Provider>
-        </UserContext.Provider>
-        <CounterReducer />
-        <h1>カウント{count.firstCounter}</h1>
-        <CountContext.Provider value={{countState: count, countDispatch: dispatch}}>
-            <ComponentA />
-            <ComponentB />
-            <ComponentC />
-        </CountContext.Provider>
-        <h1>{state.loading ? 'Loading....' : state.post.title }</h1>
-        <h1>{state.error ? state.error : null }</h1>
-        <WrapComponent />
-        <Check />
-        <FocusInput />
-        <Count />
-        <DocTitleUpdateOne />
-        <DocTitleUpdateTwo />
+            <UserContext.Provider value={user}>
+                <LanguageContext.Provider value={language}>
+                    <ComponentD />
+                </LanguageContext.Provider>
+            </UserContext.Provider>
+            <CounterReducer />
+            <h1>カウント{count.firstCounter}</h1>
+            <CountContext.Provider value={{countState: count, countDispatch: dispatch}}>
+                <ComponentA />
+                <ComponentB />
+                <ComponentC />
+            </CountContext.Provider>
+            <h1>{state.loading ? 'Loading....' : state.post.title }</h1>
+            <h1>{state.error ? state.error : null }</h1>
+            <WrapComponent />
+            <Check />
+            <FocusInput />
+            <Count />
+            <DocTitleUpdateOne />
+            <DocTitleUpdateTwo />
         */}
         <Form />
     </div>

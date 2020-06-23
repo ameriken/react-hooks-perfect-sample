@@ -1,7 +1,7 @@
-import React, {useContext} from 'react';
-import { CountContext } from '../App'
+import React, { useContext } from 'react';
+import { CountContext } from '../../App'
 
-function ComponentB(props) {
+function ComponentA() {
     const countContext = useContext(CountContext)
     return (
         <div>
@@ -12,4 +12,4 @@ function ComponentB(props) {
     );
 }
 
-export default ComponentB;
+export default ComponentA;
