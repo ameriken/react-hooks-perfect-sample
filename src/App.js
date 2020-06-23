@@ -11,8 +11,11 @@ import ComponentC from "./component/ComponentC";
 import CounterReducer from "./component/CounterReducer";
 import ComponentA from "./component/ComponentA";
 import ComponentB from "./component/ComponentB";
-import axios from 'axios'
 import WrapComponent from "./component/WrapComponent";
+import Check from "./component/useMemo/Check";
+import axios from 'axios'
+import FocusInput from "./component/useRef/FocusInput";
+import Count from "./component/useRef/Count"
 
 export const UserContext = createContext()
 export const LanguageContext = createContext()
@@ -93,8 +96,11 @@ function App() {
         </CountContext.Provider>
         <h1>{state.loading ? 'Loading....' : state.post.title }</h1>
         <h1>{state.error ? state.error : null }</h1>
-        */}
         <WrapComponent />
+        <Check />
+        <FocusInput />
+        */}
+        <Count />
     </div>
   );
 }
