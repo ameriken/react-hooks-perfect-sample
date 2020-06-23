@@ -16,6 +16,9 @@ import Check from "./component/useMemo/Check";
 import axios from 'axios'
 import FocusInput from "./component/useRef/FocusInput";
 import Count from "./component/useRef/Count"
+import DocTitleUpdateOne from "./component/customHook/DocTitleUpdateOne";
+import DocTitleUpdateTwo from "./component/customHook/DocTitleUpdateTwo";
+import Form from "./component/customHook/Form";
 
 export const UserContext = createContext()
 export const LanguageContext = createContext()
@@ -99,8 +102,11 @@ function App() {
         <WrapComponent />
         <Check />
         <FocusInput />
-        */}
         <Count />
+        <DocTitleUpdateOne />
+        <DocTitleUpdateTwo />
+        */}
+        <Form />
     </div>
   );
 }
