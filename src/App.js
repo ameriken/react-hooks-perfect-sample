@@ -19,6 +19,10 @@ import Count from "./component/useRef/Count"
 import DocTitleUpdateOne from "./component/customHook/DocTitleUpdateOne";
 import DocTitleUpdateTwo from "./component/customHook/DocTitleUpdateTwo";
 import Form from "./component/customHook/Form";
+import Pattern1 from "./component/useRef/test/Pattern1";
+import Pattern2 from "./component/useRef/test/Pattern2";
+import Pattern3 from "./component/useRef/test/Pattern3";
+import Pattern4 from "./component/useRef/test/Pattern4";
 
 export const UserContext = createContext()
 export const LanguageContext = createContext()
@@ -103,11 +107,15 @@ function App() {
             <WrapComponent />
             <Check />
             <FocusInput />
+         <Pattern1 />
+         */}
+        <Pattern4 />
+        {/*
             <Count />
             <DocTitleUpdateOne />
             <DocTitleUpdateTwo />
-        */}
         <Form />
+        */}
     </div>
   );
 }
